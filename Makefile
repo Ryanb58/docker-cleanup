@@ -19,3 +19,6 @@ kill: ## Kill all containers.
 rm-dang-images: ## Removes dangling images.
 	docker rmi $(docker images -a --filter=dangling=true -q)
 
+.PHONY: rm-exited-containers
+rm-exited-containers: ## Removes containers that are done.
+	docker rm -v $(docker ps -a -q -f status=exited)
