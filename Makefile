@@ -1,6 +1,5 @@
-"""
-Makefile to specifically help cleaning up docker.
-"""
+#Makefile help cleaning up docker.
+
 
 .PHONY: help
 help: ## Display callable targets.
